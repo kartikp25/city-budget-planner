@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Budget Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="container">
+
+            <div class="brand">
+                <div class="brand-icon">IN</div>
+                <span>Budget Analyzer</span>
+            </div>
+
+            <h1>
+                Map your lifestyle across
+                <span>Indian cities.</span>
+            </h1>
+
+            <p class="subtitle">
+                Compare living costs, estimate your savings, and find the city that best fits your income and lifestyle
+                goals.
+            </p>
+
+            <div class="income-card">
+                <label for="income">Monthly In-hand Income</label>
+                <div class="input-box">
+                    <span>₹</span>
+                    <input id="income" type="text" value="80,000">
+                </div>
+            </div>
+
+            <button id="toggleActualsBtn" class="toggle-btn">+ Add Your Actual Expenses for Comparison</button>
+            <div class="actuals-card" id="actualsCard" style="display: none;">
+                <h3 style="margin-bottom: 5px;">Your Actual Expenses</h3>
+                <p style="font-size: 14px; margin-bottom: 15px; color: #666;">Enter your current spendings to compare
+                    against city estimates.</p>
+                <div class="actuals-grid">
+                    <div class="input-group">
+                        <label>Housing</label>
+                        <div class="input-box"><span>₹</span><select id="actualHousing" class="actual-input"></select>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Food & Groceries</label>
+                        <div class="input-box"><span>₹</span><select id="actualFood" class="actual-input"></select>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Cab & Transport</label>
+                        <div class="input-box"><span>₹</span><select id="actualTransport" class="actual-input"></select>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Utilities</label>
+                        <div class="input-box"><span>₹</span><select id="actualUtilities" class="actual-input"></select>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Lifestyle</label>
+                        <div class="input-box"><span>₹</span><select id="actualLifestyle" class="actual-input"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Accommodation Type</h2>
+                <p>Select your housing option</p>
+            </div>
+
+            <div class="city-buttons" id="stayButtons">
+                <button class="city-btn" data-stay="1bhk">1 BHK</button>
+                <button class="city-btn" data-stay="2bhk">2 BHK</button>
+                <button class="city-btn" data-stay="3bhk">3 BHK</button>
+            </div>
+
+            <div class="section-title">
+                <h2>Select Cities</h2>
+                <p>Compare up to 3 cities</p>
+            </div>
+
+            <div id="cityButtons" class="city-buttons"></div>
+            <div id="recommendation" class="recommendation"></div>
+            <div id="resultCards" class="cards"></div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

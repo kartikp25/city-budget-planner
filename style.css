@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff8ee;
+    color: #142c2f;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0d4f59, #07383f);
+    color: white;
+    padding: 80px 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #f7a928;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+}
+
+.income-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box span {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 10px 12px 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+}
+
+main {
+    padding: 50px 0;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.city-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.city-btn {
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+.city-btn.active {
+    background: #e66b13;
+    color: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.best-strip {
+    height: 5px;
+    background: #f7a928;
+    display: none;
+}
+
+.card.best .best-strip {
+    display: block;
+}
+
+.score {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.score.high {
+    background: #dff7e7;
+}
+
+.score.mid {
+    background: #e4f0ff;
+}
+
+.score.low {
+    background: #fff1d6;
+}
+
+.score.bad {
+    background: #ffe0da;
+}
+
+.bar {
+    width: 100%;
+    height: 8px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0d4f59, #f7a928);
+}
+
+.savings {
+    margin-top: 20px;
+}
+
+.toggle-btn {
+    margin-top: 15px;
+    background: transparent;
+    color: #f7a928;
+    border: 1px solid #f7a928;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: rgba(247, 169, 40, 0.1);
+}
+
+.actuals-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    color: #142c2f;
+}
+
+.actuals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.actual-input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.expense-actual {
+    font-size: 13px;
+    color: #555;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.diff-positive {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.diff-negative {
+    color: #c62828;
+    font-weight: bold;
+}
+
+@media(max-width:900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
